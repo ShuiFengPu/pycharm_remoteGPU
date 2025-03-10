@@ -1,0 +1,17 @@
+远程运行深度学习模型步骤：
+1、远程上传数据：
+ 	login
+ 	cp D:\ChromeDownload\archive.zip oss://datasets/
+2、购买、开启实例
+3、pycharm添加远程解释器
+4、打开pycharm终端，登录
+5、在工具--部署--映射中找到对应项目路径
+6、cd 转到对应目录，安装软件包	
+	pip install -r requirements.txt
+7、将上传的数据复制到hy-tmp     
+	oss cp oss://datasets/archive.zip  /hy-tmp/archive.zip
+      解压到data
+	unzip /hy-tmp/archive.zip -d /项目路径/data
+8、修改数据集路径
+9.运行train.py
+
